@@ -54,7 +54,7 @@ export default class App extends React.Component {
   render() {
     const { select, key, show, showX, showY } = this.state;
     return (
-      <View
+      <SafeAreaView
         style={styles.container}
         onLayout={({
           nativeEvent: {
@@ -147,6 +147,7 @@ export default class App extends React.Component {
                     },
                   }) => {
                     // console.log(item[0], x, y, width, height);
+                    this.ps = this.ps.filter(i => i.key !== item[0]);
                     this.ps.push({
                       key: item[0],
                       min: y,
@@ -165,7 +166,7 @@ export default class App extends React.Component {
             )}
           </View>
         </View>
-      </View>
+      </SafeAreaView>
     );
   }
 }
