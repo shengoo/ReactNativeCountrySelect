@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import ReactNativeHapticFeedback from 'react-native-haptic-feedback';
 
-import countries from './ ';
+import countries from './countryCode.json';
 const sectionMapArr = [
   ['A', 0],
   ['B', 20],
