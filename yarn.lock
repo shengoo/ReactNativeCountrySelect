@@ -4891,6 +4891,11 @@ react-is@^16.8.1, react-is@^16.8.3, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
 
+react-native-haptic-feedback@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/react-native-haptic-feedback/-/react-native-haptic-feedback-1.7.1.tgz#29000ef867fdd80a5eb20293d6274cd10f1cf577"
+  integrity sha512-iuXBEZsQbKOe5uOLXuzTEvrvUCV0a4AktAfJHlWK7Jb0t/ABUc4kUfclqx+la+yA1TKrauDp/6MjrP0OUDXA9Q==
+
 react-native@0.59.4:
   version "0.59.4"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.59.4.tgz#c0725e2e8efdea135533794ce95fea2289fe619a"
