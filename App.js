@@ -52,7 +52,7 @@ export default class App extends React.Component {
     this.offsetY = 0;
   }
   render() {
-    const { select, key, show, showX, showY } = this.state;
+    const { select, key, show, showX, showY = -1000 } = this.state;
     return (
       <SafeAreaView
         style={styles.container}
@@ -69,6 +69,7 @@ export default class App extends React.Component {
           <View style={{ flex: 1, justifyContent: 'center' }}>
             <SectionList
               ref={this.sectionlist}
+              ItemSeparatorComponent={() => (<View style={{borderBottomColor: '#F8F8F8',borderBottomWidth: 1,}} />)}
               renderItem={({ item, index, section }) => (
                 <View style={styles.itemContainer}>
                   <Text style={styles.itemText} key={index}>
@@ -152,9 +153,37 @@ export default class App extends React.Component {
               );
             })}
             {show && (
-              <Text style={{ position: 'absolute', left: -30, top: showY }}>
-                {key}
-              </Text>
+              <View style={{
+                position: 'absolute', left: -60, top: showY - 10,borderRadius: 20,width: 60, height: 40,
+                flexDirection: 'row',
+              }}>
+                <View style={{
+                  width: 40,
+                  borderRadius: 20,
+                  backgroundColor: '#999999',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  }}>
+                  <Text style={{  fontSize: 30, color: '#FFFFFF',  }}>
+                    {key}
+                  </Text>
+                </View>
+                <View style={{
+                  position: 'absolute', 
+                  top: 3,
+                  bottom: 3,
+                  right: 0,
+                  width: 30,
+                  borderLeftColor: '#999999',
+                  borderLeftWidth: 22,
+                  borderTopColor: 'transparent',
+                  borderTopWidth: 16,
+                  borderBottomColor: 'transparent',
+                  borderBottomWidth: 16,
+                }}>
+
+                </View>
+              </View>
             )}
           </View>
         </View>
