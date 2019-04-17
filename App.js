@@ -56,14 +56,7 @@ export default class App extends React.Component {
     return (
       <SafeAreaView
         style={styles.container}
-        onLayout={({
-          nativeEvent: {
-            layout: { x, y, width, height },
-          },
-        }) => {
-          console.log(x, y, width, height);
-          this.offsetY = y;
-        }}>
+      >
         <View
           style={{ flex: 1, flexDirection: 'row' }}
           onLayout={({
@@ -71,7 +64,6 @@ export default class App extends React.Component {
               layout: { x, y, width, height },
             },
           }) => {
-            console.log(x, y, width, height);
             this.offsetY = y;
           }}>
           <View style={{ flex: 1, justifyContent: 'center' }}>
@@ -113,7 +105,6 @@ export default class App extends React.Component {
               console.log('onResponderReject');
             }}
             onResponderMove={({ nativeEvent: { pageX, pageY, locationY } }) => {
-              console.log(pageY, locationY)
               const offsetY = pageY - this.offsetY;
               const find = this.ps.find(
                 i => i.min < offsetY && i.max > offsetY
